@@ -89,8 +89,6 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
-            // 'encrypt' => env('DB_ENCRYPT', 'yes'),
-            // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
         'mongodb' => [
@@ -102,15 +100,7 @@ return [
                 . '/' . env('MONGO_DB_DATABASE')
                 . '?retryWrites=true&w=majority',
             'database' => env('MONGO_DB_DATABASE'),
-
-
-            // 'host' => env('MONGO_DB_HOST', '127.0.0.1'),
-            // 'port' => env('MONGO_DB_PORT', 27017),
-            // 'database' => env('MONGO_DB_DATABASE', 'homestead'),
-            // 'username' => env('MONGO_DB_USERNAME', 'homestead'),
-            // 'password' => env('MONGO_DB_PASSWORD', 'secret'),
         ],
-
     ],
 
     /*
