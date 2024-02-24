@@ -22,7 +22,7 @@ services:
     networks:
       - laravel-network
     ports:
-        - 54320:5432
+        - 27017:27017
 
   mysql:
     image: mysql:latest
