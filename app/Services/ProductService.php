@@ -6,7 +6,8 @@ use App\Repositories\ProductRepository;
 
 class ProductService extends BaseService
 {
-    public function __construct(private readonly ProductRepository $repository)
+    public function __construct(ProductRepository $repository)
     {
+        parent::__construct($repository);
     }
 }

@@ -11,26 +11,26 @@ abstract class BaseRepository
 
     public function index(): Collection
     {
-        return $this->model()->get();
+        return $this->model()::get();
     }
 
     public function show(int $id): Model
     {
-        return $this->model()->find($id);
+        return $this->model()::find($id);
     }
 
     public function store(array $data): Model
     {
-        return $this->model()->create($data);
+        return $this->model()::create($data);
     }
 
     public function update(int $id, array $data): Model
     {
-        return $this->model()->find($id)->update($data);
+        return $this->model()::find($id)->update($data);
     }
 
     public function destroy(int $id)
     {
-        return $this->model()->destroy($id);
+        return $this->model()::destroy($id);
     }
 }

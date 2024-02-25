@@ -10,6 +10,11 @@ class BaseService
 {
     private readonly BaseRepository $repository;
 
+    public function __construct(BaseRepository $repository)
+    {
+        $this->repository = $repository;
+    }
+
     public function index(): Collection
     {
         return $this->repository->index();
