@@ -20,7 +20,7 @@ class BaseService
         return $this->repository->index();
     }
 
-    public function show(int $id): Model
+    public function show(int $id): ?Model
     {
         return $this->repository->show($id);
     }

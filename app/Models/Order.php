@@ -12,5 +12,6 @@ class Order extends Model
         'product_id',
         'user_id',
         'payment_id',
+        'address',
     ];
 }

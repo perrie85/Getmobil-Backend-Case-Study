@@ -14,9 +14,9 @@ abstract class BaseRepository
         return $this->model()::get();
     }
 
-    public function show(int $id): Model
+    public function show(int $id): ?Model
     {
-        return $this->model()::find($id);
+        return $this->model()::findOrFail($id);
     }
 
     public function store(array $data): Model
