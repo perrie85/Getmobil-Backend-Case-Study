@@ -3,12 +3,11 @@
 namespace App\Repositories;
 
 use App\Models\Product;
-use Illuminate\Contracts\Database\Eloquent\Builder;
 
-class ProductRepository
+class ProductRepository extends BaseRepository
 {
-    public function builder(): Builder
+    protected function model()
     {
-        return Product::query();
+        return Product::class;
     }
 }
