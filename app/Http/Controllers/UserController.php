@@ -21,21 +21,21 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        return $this->successResponse($this->service->store());
+        return $this->successResponse($this->service->store($request->all()));
     }
 
-    public function show(string $id)
+    public function show(int $id)
     {
-        return $this->successResponse($this->service->show());
+        return $this->successResponse($this->service->show($id));
     }
 
-    public function update(Request $request, string $id)
+    public function update(Request $request, int $id)
     {
-        return $this->successResponse($this->service->update());
+        return $this->successResponse($this->service->update($id, $request->all()));
     }
 
-    public function destroy(string $id)
+    public function destroy(int $id)
     {
-        return $this->successResponse($this->service->destroy());
+        return $this->successResponse($this->service->destroy($id));
     }
 }

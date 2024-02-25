@@ -3,12 +3,11 @@
 namespace App\Repositories;
 
 use App\Models\User;
-use Illuminate\Contracts\Database\Eloquent\Builder;
 
-class UserRepository
+class UserRepository extends BaseRepository
 {
-    public function builder(): Builder
+    protected function model()
     {
-        return User::query();
+        return User::class;
     }
 }

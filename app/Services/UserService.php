@@ -2,33 +2,11 @@
 
 namespace App\Services;
 
-use App\Http\Resources\UserResource;
 use App\Repositories\UserRepository;
 
-class UserService
+class UserService extends BaseService
 {
-    public function __construct(
-        private UserRepository $repository
-    ) {
-    }
-
-    public function index()
-    {
-    }
-
-    public function show()
-    {
-    }
-
-    public function store()
-    {
-    }
-
-    public function update()
-    {
-    }
-
-    public function destroy()
+    public function __construct(private readonly UserRepository $repository)
     {
     }
 }
