@@ -1,4 +1,4 @@
-# Use the official PHP 8.1 image based on Alpine Linux
+# Use the official PHP 8.2 image based on Alpine Linux
 FROM php:8.2-alpine
 
 # Set working directory

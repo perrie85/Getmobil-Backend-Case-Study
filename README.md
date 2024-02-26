@@ -6,7 +6,7 @@
 - MongoDB Compass - To display your mongodb database - optional
 - Any SQL Client Software - To display your mysql database - optional
 
-## How To Run
+## Setup
 
 - Copy .env-example as .env
     - macOS/Linux: `cp .env.example .env`
@@ -16,15 +16,7 @@
 
 ```
 docker-compose build
-docker-compose run app composer install
-docker-compose up -d
-```
-
-- Run these commands to generate the application key.
-
-```
-docker exec -it app sh
-php artisan key:generate
+docker-compose run php composer install
 ```
 
 - To deploy the development server
@@ -49,3 +41,28 @@ docker-compose up -d
     - redis: for management of order data
         - host -> http://127.0.0.1
         - port -> 6379
+
+- To connect to your application service, run the command below.
+```
+docker exec -it app sh
+```
+
+- Run the command below to generate the application key
+```
+php artisan key:generate
+```
+
+- While you are still connected to your application service via sh, run the command below to run the migrations.
+```
+php artisan migrate
+```
+
+- While you are still connected to your application service via sh, run the command below to generate default clients.
+```
+ php artisan passport:install
+```
+
+- While you are still connected to your application service via sh, run the command below to generate products.
+```
+ php artisan db:seed
+```
