@@ -1,5 +1,7 @@
 # Getmobil Backend Case Study
 
+## [Postman Collection](https://github.com/perrie85/Getmobil-Backend-Case-Study/blob/main/Getmobil%20Backend%20Case%20Study.postman_collection.json)
+
 ## Requirements
 - Docker
 - Docker Compose
@@ -7,7 +9,6 @@
 - Any SQL Client Software - To display your mysql database - optional
 
 ## Setup
-
 - Copy .env-example as .env
     - macOS/Linux: `cp .env.example .env`
     - Windows: `cp .\.env.example .\.env`
