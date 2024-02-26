@@ -3,10 +3,11 @@
 namespace App\Services;
 
 use App\Exceptions\LoginException;
+use App\Models\User;
 use App\Repositories\UserRepository;
-use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class AuthenticationService
 {
@@ -27,5 +28,11 @@ class AuthenticationService
         }
 
         throw new ModelNotFoundException('User does not exist');
+    }
+
+    public function register(array $data): User
+    {
+        $request['remember_token'] = Str::random(10);
+        return $this->repository->store($data);
     }
 }
