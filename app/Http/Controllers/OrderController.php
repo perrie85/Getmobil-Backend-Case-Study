@@ -24,17 +24,17 @@ class OrderController extends Controller
         return $this->successResponse($this->service->store($request->all()));
     }
 
-    public function show(int $id)
+    public function show(string $id)
     {
         return $this->successResponse($this->service->show($id));
     }
 
-    public function update(Request $request, int $id)
+    public function update(Request $request, string $id)
     {
         return $this->successResponse($this->service->update($id, $request->all()));
     }
 
-    public function destroy(int $id)
+    public function destroy(string $id)
     {
         return $this->successResponse($this->service->destroy($id));
     }

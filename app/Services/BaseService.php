@@ -20,7 +20,7 @@ class BaseService
         return $this->repository->index();
     }
 
-    public function show(int $id): ?Model
+    public function show(int|string $id): ?Model
     {
         return $this->repository->show($id);
     }
@@ -30,12 +30,12 @@ class BaseService
         return $this->repository->store($data);
     }
 
-    public function update(int $id, array $data): Model
+    public function update(int|string $id, array $data): Model
     {
         return $this->repository->update($id, $data);
     }
 
-    public function destroy(int $id)
+    public function destroy(int|string $id)
     {
         return $this->repository->destroy($id);
     }

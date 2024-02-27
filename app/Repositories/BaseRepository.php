@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 abstract class BaseRepository
 {
-    protected abstract function model();
+    abstract protected function model();
 
     public function index(): Collection
     {
         return $this->model()::get();
     }
 
-    public function show(int $id): ?Model
+    public function show(int|string $id): ?Model
     {
         return $this->model()::findOrFail($id);
     }
@@ -24,12 +24,12 @@ abstract class BaseRepository
         return $this->model()::create($data);
     }
 
-    public function update(int $id, array $data): Model
+    public function update(int|string $id, array $data): Model
     {
         return $this->model()::find($id)->update($data);
     }
 
-    public function destroy(int $id)
+    public function destroy(int|string $id)
     {
         return $this->model()::destroy($id);
     }
